@@ -1,17 +1,219 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Ting (Justin) Jiang</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ting Jiang | Duke University</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <style>
+        /* GLASS TOGGLE STYLES */
+        
+        /* Container positioning */
+        .about-overlay-container {
+            position: absolute;
+            top: 50%;
+            right: 60px; 
+            transform: translateY(-50%);
+            width: 360px; /* Thinner width */
+            z-index: 10;
+        }
+
+        /* The Transparent Block */
+        details.about-toggle {
+            background: rgba(0, 0, 0, 0.3); /* High transparency (30%) */
+            backdrop-filter: blur(20px);    /* Stronger blur for readability */
+            -webkit-backdrop-filter: blur(20px);
+            border: 0.5px solid rgba(255, 255, 255, 0.15); /* Thinner, subtle border */
+            padding: 0;
+            color: #fff;
+            transition: all 0.3s ease;
+            border-radius: 2px; /* Slight radius for modern feel */
+        }
+
+        /* Slightly darker when open to help reading text */
+        details.about-toggle[open] {
+            background: rgba(0, 0, 0, 0.5); 
+        }
+
+        /* Header */
+        summary {
+            padding: 15px 20px;
+            cursor: pointer;
+            font-weight: 500;
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            outline: none;
+        }
+
+        summary::-webkit-details-marker { display: none; }
+
+        /* +/- Icon */
+        summary::after { content: '+'; font-weight: 300; font-size: 1.1rem; }
+        details[open] summary::after { content: '-'; }
+
+        /* Content */
+        .about-content {
+            padding: 0 20px 20px 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            font-weight: 300;
+            line-height: 1.5;
+            font-size: 0.9rem; /* Slightly smaller text for the thinner box */
+            animation: fadeIn 0.3s ease;
+        }
+
+        /* Links in the glass block */
+        .about-content a {
+            color: #d0e8ff;
+            text-decoration: none;
+            border-bottom: 1px solid rgba(208, 232, 255, 0.3);
+            transition: color 0.2s;
+        }
+        .about-content a:hover {
+            color: #fff;
+            border-bottom-color: #fff;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-5px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @media (max-width: 900px) {
+            .about-overlay-container {
+                position: relative;
+                width: 100%;
+                top: auto;
+                right: auto;
+                transform: none;
+                margin-top: 0;
+            }
+            details.about-toggle {
+                background: #111; /* Solid background on mobile */
+                backdrop-filter: none;
+                border: none;
+                border-bottom: 1px solid #333;
+            }
+        }
+    </style>
 </head>
 <body>
-  <h1>Ting (Justin) Jiang</h1>
-  <p>Website under construction.</p>
-  <p>
-    Visit my GitHub:
-    <a href="https://github.com/Ting-Justin-Jiang">
-      github.com/Ting-Justin-Jiang
-    </a>
-  </p>
+
+    <nav>
+        <div class="brand">TING "JUSTIN" JIANG</div>
+        <a href="index.html" class="active">HOME/BIO</a>
+        <a href="research.html">RESEARCH</a>
+        <a href="music.html">MUSIC</a>
+        <a href="https://github.com/Ting-Justin-Jiang" target="_blank">GITHUB ↗</a>
+        <div style="margin-top: auto; font-size: 0.8rem; color: #888;"> justin dot jiang at duke dot edu</div>
+    </nav>
+
+    <main>
+        <section class="video-hero" style="height: 60vh;">
+            <video autoplay muted loop playsinline>
+                <source src="assets/teaser_grass.mp4" type="video/mp4">
+            </video>
+            
+            <div class="hero-overlay">
+                <h1>Denoising Creativity.</h1>
+                <p>PhD Applicant | Undergraduate Researcher @ Duke</p>
+            </div>
+
+            <div class="about-overlay-container">
+                <details class="about-toggle" open>
+                    <summary>About Me</summary>
+                    <div class="about-content">
+                        <p style="margin-bottom: 15px;">
+                          Undergraduate at <strong>Duke University</strong>.
+                          I build fast diffusion/flow inference that preserves information quality in far fewer steps and study how representations can co-evolve with generation, aiming toward interactive multimodal systems that can truly jam with creators in real time.
+                        </p>
+                        <p style="opacity: 0.85;">
+                            Advisors:<br>
+                            <a href="https://ece.duke.edu/faculty/yiran-chen" target="_blank">Prof. Yiran Chen</a> & 
+                            <a href="https://yxw.cs.illinois.edu/" target="_blank">Prof. Yuxiong Wang</a>.
+                            <br><br>
+                            Mentors:<br>
+                            <a href="https://jingwei-sun.com/" target="_blank">Jingwei Sun</a>, 
+                            <a href="https://ziqipang.github.io/" target="_blank">Ziqi Pang</a>, 
+                            <a href="https://hanchengye.com/" target="_blank">Hancheng Ye</a>.
+                        </p>
+                    </div>
+                </details>
+            </div>
+        </section>
+
+        <div style="padding: 20px 60px; font-size: 0.9rem; font-weight: 600; letter-spacing: 0.05em; color: #888; text-transform: uppercase;">
+            Selected Works
+        </div>
+
+        <section class="ableton-block" style="background-color: var(--ableton-mint);">
+            <div class="block-content">
+                <h2>SADA: Stability-guided Adaptive Diffusion Acceleration.</h2>
+                <p style="margin-bottom: 10px; font-weight: 500;"><strong>Ting Jiang*</strong>, Yixiao Wang*, Hancheng Ye*, et al.</p>
+                <p style="font-size: 0.9rem; color: #555; margin-bottom: 20px;"><strong>ICML 2025</strong></p>
+                <div class="link-group">
+                    <a href="https://openreview.net/pdf?id=ThMQfsBnje" target="_blank" class="ableton-link">Paper</a>
+                    <a href="https://github.com/Ting-Justin-Jiang/sada-icml" target="_blank" class="ableton-link">Code</a>
+                </div>
+            </div>
+            <div class="block-image">
+                <img src="assets/sada-teaser.jpg" alt="SADA Architecture" class="teaser-fig">
+            </div>
+        </section>
+        
+        <section class="ableton-block" style="background-color: #EBEBEB;">
+            <div class="block-content">
+                <h2>Accelerating Denoising Generative Models is as Easy as Predicting Second-Order Difference.</h2>
+                <p style="margin-bottom: 10px; font-weight: 500;">Yixiao Wang*, <strong>Ting Jiang*</strong>, Zishan Shao*, et al.</p>
+                <p style="font-size: 0.9rem; color: #555; margin-bottom: 20px;">Under review at <strong>ICLR 2026</strong></p>
+                <div class="link-group">
+                    <a href="https://openreview.net/pdf?id=ZYuPaFsqsS" target="_blank" class="ableton-link">PDF</a>
+                    <a href="https://github.com/Ting-Justin-Jiang/ZEUS" target="_blank" class="ableton-link">Code</a>
+                    <a href="https://yixiao-wang-stats.github.io/zeus/" target="_blank" class="ableton-link">Website</a>
+                </div>
+            </div>
+            <div class="block-image">
+                <img src="assets/zeus-teaser.jpg" alt="ZEUS Demo" class="teaser-fig">
+            </div>
+        </section>
+        
+        <section class="ableton-block" style="background-color: #FFF8B5;">
+            <div class="block-content">
+                <h2>On the Importance of Jointly Evolving Representations and Images.</h2>
+                <p style="margin-bottom: 10px; font-weight: 500;"><strong>Ting Jiang*</strong>, Ziqi Pang*, Yuxiong Wang</p>
+                <p style="font-size: 0.9rem; color: #555; margin-bottom: 20px;">Under review at <strong>CVPR 2026</strong></p>
+                <div class="link-group">
+                    <span style="font-size: 0.9rem; color: #888;">Links coming soon</span>
+                </div>
+            </div>
+            <div class="block-image">
+                <img src="assets/jeri-teaser.jpg" alt="JERI Visualization" class="teaser-fig">
+            </div>
+        </section>
+
+        <div style="padding: 40px 60px; text-align: left;">
+            <a href="research.html" style="
+                display: inline-block; 
+                padding: 15px 30px; 
+                border: 1px solid #000; 
+                text-decoration: none; 
+                color: #000; 
+                font-weight: 500; 
+                text-transform: uppercase; 
+                font-size: 0.9rem;
+                transition: background 0.2s, color 0.2s;">
+                View Full Publication List (6) →
+            </a>
+        </div>
+
+    </main>
+
 </body>
 </html>

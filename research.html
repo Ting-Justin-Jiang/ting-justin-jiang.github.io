@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research | Ting "Justin" Jiang</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+
+    <nav>
+        <div class="brand">TING "JUSTIN" JIANG</div>
+        <a href="index.html">HOME/BIO</a>
+        <a href="research.html" class="active">RESEARCH</a>
+        <a href="music.html">MUSIC</a>
+        <a href="https://github.com/Ting-Justin-Jiang">GITHUB ↗</a>
+        <div style="margin-top: auto; font-size: 0.8rem; color: #888;">DUKE UNIVERSITY</div>
+    </nav>
+
+    <main>
+        <section class="video-hero" style="height: 60vh; position: relative; overflow: hidden; background: #000;">
+            
+            <video autoplay muted loop playsinline style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0;">
+                <source src="assets/teaser_grass.mp4" type="video/mp4">
+            </video>
+            
+            <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: #000; mix-blend-mode: multiply; z-index: 1; display: flex; align-items: center; justify-content: center; pointer-events: none;">
+                <h1 style="
+                    font-family: 'Georgia', serif; 
+                    font-size: 16vw; 
+                    font-weight: 900; 
+                    color: #fff; 
+                    margin: 0; 
+                    text-transform: uppercase; 
+                    letter-spacing: -0.05em; 
+                    line-height: 0.9;
+                    text-align: center;
+                    width: 100%;">
+                    */"°^<
+                </h1>
+            </div>
+        
+            <div class="hero-overlay" style="position: absolute; bottom: 40px; left: 60px; color: white; z-index: 2; text-shadow: 0px 0px 20px rgba(0,0,0,0.8);">
+                <h1 style="font-size: 2.5rem; font-weight: 500; letter-spacing: -0.04em; margin-bottom: 5px;">Publications & Preprints.</h1>
+                <p style="font-size: 1.1rem; opacity: 0.9; font-weight: 300;">I want to jam with Jacob Collier...so I start building creative partners.</p>
+            </div>
+        </section>
+
+        <section class="ableton-block" style="background-color: var(--ableton-mint);">
+            <div class="block-content">
+                <h2>SADA: Stability-guided Adaptive Diffusion Acceleration.</h2>
+                <p class="authors"><strong>Ting Jiang*</strong>, Yixiao Wang*, Hancheng Ye*, Zishan Shao, Jingwei Sun, Jingyang Zhang, Zekai Chen, Jianyi Zhang, Yiran Chen, Hai Li</p>
+                <p class="venue"><strong>ICML 2025</strong></p>
+                <p>Proposed a unified, training-free framework to accelerate the sampling process in denoising generative model by leveraging stability-guided sparsity allocation and principled approximations for intermediate states.</p>
+                <div class="link-group">
+                    <a href="https://openreview.net/pdf?id=ThMQfsBnje" class="ableton-link">PDF</a>
+                    <a href="https://github.com/Ting-Justin-Jiang/sada-icml" class="ableton-link">Code</a>
+                </div>
+            </div>
+            <div class="block-image">
+                <img src="assets/sada-teaser.jpg" alt="SADA Architecture" class="teaser-fig">
+            </div>
+        </section>
+
+        <section class="ableton-block" style="background-color: #EBEBEB;">
+            <div class="block-content">
+                <h2>Accelerating Denoising Generative Models is as Easy as Predicting Second-Order Difference.</h2>
+                <p class="authors">Yixiao Wang*, <strong>Ting Jiang*</strong>, Zishan Shao*, Hancheng Ye, Jingwei Sun, Mingyuan Ma, Qinsi Wang, Jianyi Zhang, Yiran Chen, Hai Li</p>
+                <p class="venue">Under review at <strong>ICLR 2026</strong></p>
+                <p>Proposed a training-free framework that formulates aggressive acceleration as an information constrained-setting, combining a solver-agnostic second-order predictor and stabilizing it with an effective reuse schedule.</p>
+                <div class="link-group">
+                    <a href="https://openreview.net/pdf?id=ZYuPaFsqsS" class="ableton-link">PDF</a>
+                    <a href="https://github.com/Ting-Justin-Jiang/ZEUS" class="ableton-link">Code</a>
+                    <a href="https://yixiao-wang-stats.github.io/zeus/" class="ableton-link">Website</a>
+                </div>
+            </div>
+            <div class="block-image">
+                <img src="assets/zeus-teaser.jpg" alt="ZEUS Demo" class="teaser-fig">
+            </div>
+        </section>
+
+        <section class="ableton-block" style="background-color: #FFF8B5;">
+            <div class="block-content">
+                <h2>On the Importance of Jointly Evolving Representations and Images.</h2>
+                <p class="authors"><strong>Ting Jiang*</strong>, Ziqi Pang*, Yuxiong Wang</p>
+                <p class="venue">In submission to <strong>CVPR 2026</strong></p>
+                <p>Proposed JERI, a joint diffusion framework in which images and self-supervised representations co-evolve via bi-directional conditioning.</p>
+                <div class="link-group">
+                    <span style="font-size: 0.9rem; color: #888;">Links coming soon</span>
+                </div>
+            </div>
+            <div class="block-image">
+                <img src="assets/jeri-teaser.jpg" alt="JERI Visualization" class="teaser-fig">
+            </div>
+        </section>
+
+        <section class="ableton-block" style="background-color: #D6EAF8;"> <div class="block-content">
+                <h2>FlashSVD: Memory-Efficient Inference with Streaming for Low-Rank Models.</h2>
+                <p class="authors">Zishan Shao, Yixiao Wang, Qinsi Wang, <strong>Ting Jiang</strong>, Zhixu Du, Hancheng Ye, Danyang Zhuo, Yiran Chen</p>
+                <p class="venue"><strong>AAAI 2026</strong></p>
+                <p>Rank-aware streaming kernels (FlashSVDAttention, FlashSVDFFN v1/v2) in CUDA/Triton that push SVD factors through attention/FFN without full activation buffers; sustained high GPU occupancy.</p>
+                <div class="link-group">
+                    <a href="https://arxiv.org/abs/2508.01506" class="ableton-link">PDF</a>
+                    <a href="https://github.com/Zishan-Shao/FlashSVD" class="ableton-link">Code</a>
+                </div>
+            </div>
+            <div class="block-image">
+                <img src="assets/flashsvd-teaser.jpg" alt="FlashSVD Architecture" class="teaser-fig">
+            </div>
+        </section>
+
+        <section class="ableton-block" style="background-color: #F2D7D5;"> <div class="block-content">
+                <h2>Enhanced Cyclic Coordinate Descent Methods for Elastic Net Penalized Linear Models.</h2>
+                <p class="authors">Yixiao Wang*, Zishan Shao*, <strong>Ting Jiang</strong>, Aditya Devarakonda</p>
+                <p class="venue"><strong>NeurIPS 2025</strong></p>
+                <p>Cyclic coordinate update scheme that refreshes second-order terms every <i>s</i> steps, reducing the per-epoch cost from O(npC) to a sublinear O(np√C) and maintaining memory usage at O(np).</p>
+                <div class="link-group">
+                    <a href="https://neurips.cc/virtual/2025/poster/116970" class="ableton-link">PDF</a>
+                    <a href="https://neurips.cc/virtual/2025/poster/116970" class="ableton-link">Code</a>
+                </div>
+            </div>
+            <div class="block-image">
+                <img src="assets/eccd-teaser.jpg" alt="ECCD Performance" class="teaser-fig">
+            </div>
+        </section>
+
+        <section class="ableton-block" style="background-color: #E8DAEF;"> <div class="block-content">
+                <h2>A2CT: Adaptive Anchored Consistency Tuning.</h2>
+                <p class="authors"><strong>Ting Jiang*</strong>, Zishan Shao*, Kangning Cui, Yueqian Lin, Yiran Chen, Julian McAuley, Taylor Berg-Kirpatrick, Zachary Novack</p>
+                <p class="venue">Under review at <strong>ICASSP 2026</strong></p>
+                <p>Proposed an RL- and re-training–free fine-tuning paradigm for few-step denoising generative models that preserves few-step sampling capability and latency.</p>
+                <div class="link-group">
+                    <a href="https://drive.google.com/file/d/1FlxiUSHkkswYDG1DnujK-j0ODhC24KRI/view?usp=sharing" class="ableton-link">PDF</a>
+                    <a href="https://drive.google.com/file/d/1FlxiUSHkkswYDG1DnujK-j0ODhC24KRI/view?usp=sharing" class="ableton-link">Code</a>
+                </div>
+            </div>
+            <div class="block-image">
+                <img src="assets/a2ct-teaser.jpg" alt="A2CT Method" class="teaser-fig">
+            </div>
+        </section>
+
+    </main>
+
+</body>
+</html>
